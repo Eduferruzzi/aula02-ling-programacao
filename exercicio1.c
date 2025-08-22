@@ -11,11 +11,16 @@ int main() {
     // Declara as variáveis
     int pontuacaoInicial, pontuacao;
 
-    // Solicita e valida a pontuação inicial
+    // Solicita e valida a pontuação inicial garantindo que seja um número positivo
+    int resultado;
     do {
         printf("Digite a pontuacao inicial do jogador (deve ser positiva): ");
-        scanf("%d", &pontuacaoInicial);
-    } while (pontuacaoInicial <= 0);
+        resultado = scanf("%d", &pontuacaoInicial);
+        if (resultado != 1 || pontuacaoInicial <= 0) {
+            printf("Entrada invalida! Tente novamente.\n");
+            while(getchar() != '\n'); // Limpa o buffer
+        }
+    } while (resultado != 1 || pontuacaoInicial <= 0);
 
     // Inicializa a pontuação atual
     pontuacao = pontuacaoInicial;
