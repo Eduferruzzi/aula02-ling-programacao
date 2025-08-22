@@ -48,11 +48,11 @@ int main() {
 
     // Determina se o aluno está aprovado
     if(media >= 5 && frequencia >= 75) {
-        printf("Aprovado! Media %.2f >= 5,00 e frequencia %d%% >= 75%%\n", media, frequencia);
+        printf("Aprovado! Media %.2f >= 5.00 e frequencia %d%% >= 75%%\n", media, frequencia);
     } else {
         printf("Aluno reprovado! Motivo: ");
         if (media < 5) {
-            printf("Media %.2f < 5,00", media);
+            printf("Media %.2f < 5.00", media);
         }
         if (media < 5 && frequencia < 75) {
             printf(" e ");
